@@ -4,7 +4,19 @@ function initMap() {
     center: { lat: -28.024, lng: 140.887 },
   });
   // Create an array of alphabetical characters used to label the markers.
-  const labels = ["Aaron", "Algonquin", "Arrow Lake","Arrowhead","Awenda","Balsam Lake","Bass Lake","Batchawana","Biscotasi Lake","Blue Lake","Bon Echo","Bonnechere",
+  const labels = [
+"Aaron", 
+"Algonquin", 
+"Arrow Lake",
+"Arrowhead",
+"Awenda",
+"Balsam Lake",
+"Bass Lake",
+"Batchawana",
+"Biscotasi Lake",
+"Blue Lake",
+"Bon Echo",
+"Bonnechere",
 "Bronte Creek",
 "Caliper Lake",
 "Charleston Lake",
@@ -107,7 +119,8 @@ function initMap() {
 "Wheatley",
 "White Lake",
 "Windy Lake",
-"Woodland Caribou"];
+"Woodland Caribou"
+];
   // Add some markers to the map.
   // Note: The code uses the JavaScript Array.prototype.map() method to
   // create an array of markers based on a given "locations" array.
