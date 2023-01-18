@@ -24,6 +24,11 @@
         map = new google.maps.Map(document.getElementById("map"), {
         center: {lat: 41.826, lng: -74.230},
         zoom: 7,
+        new google.maps.Marker({
+           position: {lat: 44.359, lng: -78.745},
+           map,
+           title: "Lindsay",
+        });
         <!--Night Mode-->
         styles: [
           { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
@@ -105,8 +110,6 @@
             stylers: [{ color: "#17263c" }],
            },
          ],
-       <!--Night Mode End-->
-       <!--Markers-->
        });
      }
     </script>
