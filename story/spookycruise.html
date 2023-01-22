@@ -106,12 +106,53 @@
            },
          ],
        });
-     }
+       new google.maps.Marker({
+        position: {lat: 44.357, lng: -78.742},
+        map,
+        title: "Lindsay, ON",
+      });
+       new google.maps.Marker({
+        position: {lat: 42.385, lng: -83.060},
+        map,
+        title: "Detroit, MI",
+      });
+       new google.maps.Marker({
+        position: {lat: 40.875, lng: -73.985},
+        map,
+        title: "New York, NY",
+      });
+      new google.maps.Marker({
+        position: {lat: 45.323, lng: -65.932},
+        map,
+        title: "Saint John, NB",
+      });
+      const TripCoordinates = [
+      {lat: 44.357, lng: -78.742},
+      {lat: 43.644, lng: -79.398},
+      {lat: 42.982, lng: -81.227},
+      {lat: 42.263, lng: -82.431},
+      {lat: 42.274, lng: -82.962},
+      {lat: 42.385, lng: -83.060},
+      {lat: 42.230, lng: -83.357},
+      {lat: 40.875, lng: -73.985},
+      {lat: 41.511, lng: -69.677},
+      {lat: 45.323, lng: -65.932},
+      ];
+      const TripPath = new google.maps.Polyline({
+        path: TripCoordinates,
+        geodesic: false,
+        strokeColor: "#FFBF00",
+        strokeOpacity: 1,
+        strokeWeight: 2,
+      });
+      TripPath.setMap(map);
+    }
+
     </script>
   </head>
   <body>
     <div id="map"></div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap&v=weekly" async>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE&callback=initMap&v=weekly" async>
     </script>
   </body>
 </html>
