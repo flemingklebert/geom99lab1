@@ -149,7 +149,116 @@
         strokeWeight: 2,
       });
       TripPath.setMap(map);
-    }
+
+      const carString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        "</div>" +
+        '<h1 id="firstHeading" class="firstHeading">Lindsay, ON</h1>' +
+        '<div id="bodyContent">' +
+        "I will be travelling by car from Lindsay to Detroit!" +
+        '<p>Car icon by Icons8</p>'
+        "</div>" +
+        "</div>";
+
+      function attachInfoWindow(marker, infoWindow) {
+      marker.addListener('click', () => {
+        infoWindow.open(map, marker);
+      });
+      }
+      const carMarker = new google.maps.Marker({
+        position: {lat: 44.280, lng: -78.742},
+        map,
+        icon: car,
+        title: "Lindsay, ON",
+      });
+      const carInfoWindow = new google.maps.InfoWindow({
+        content: carString
+      });
+      attachInfoWindow(carMarker, carInfoWindow);
+
+      const planeString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        "</div>" +
+        '<h1 id="firstHeading" class="firstHeading">Detroit, MI</h1>' +
+        '<div id="bodyContent">' +
+        "I will be travelling by plane from Detroit to New York!" +
+        '<p>Plane icon by Icons8</p>'
+        "</div>" +
+        "</div>";
+
+      function attachInfoWindow(marker, infoWindow) {
+      marker.addListener('click', () => {
+        infoWindow.open(map, marker);
+      });
+      }
+      const planeMarker = new google.maps.Marker({
+        position: {lat: 41.825, lng: -83.560},
+        map,
+        icon: plane,
+        title: "Detroit, MI",
+      });
+      const planeInfoWindow = new google.maps.InfoWindow({
+        content: planeString
+      });
+      attachInfoWindow(planeMarker, planeInfoWindow);
+
+      const cruiseString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        "</div>" +
+        '<h1 id="firstHeading" class="firstHeading">New York, NY</h1>' +
+        '<div id="bodyContent">' +
+        "I will be travelling by cruise ship from New York to Saint John!" +
+        '<p>Boat icon by Icons8</p>'
+        "</div>" +
+        "</div>";
+
+      function attachInfoWindow(marker, infoWindow) {
+      marker.addListener('click', () => {
+        infoWindow.open(map, marker);
+      });
+      }
+      const cruiseMarker = new google.maps.Marker({
+        position: {lat: 40.111, lng: -73.656},
+        map,
+        icon: cruise,
+        title: "New York, NY",
+      });
+      const cruiseInfoWindow = new google.maps.InfoWindow({
+        content: cruiseString
+      });
+      attachInfoWindow(cruiseMarker, cruiseInfoWindow);
+
+      const pumpkinString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        "</div>" +
+        '<h1 id="firstHeading" class="firstHeading">Saint John, NB</h1>' +
+        '<div id="bodyContent">' +
+        "We stop in Saint John for a spooky night to celebrate Halloween!" + " " +
+        "This ends my trip!" +
+        '<p>Boat icon by Icons8</p>'
+        "</div>" +
+        "</div>";
+
+      function attachInfoWindow(marker, infoWindow) {
+      marker.addListener('click', () => {
+        infoWindow.open(map, marker);
+      });
+      }
+      const pumpkinMarker = new google.maps.Marker({
+        position: {lat: 45.213, lng: -65.402},
+        map,
+        icon: pumpkin,
+        title: "Saint John, NB",
+      });
+      const pumpkinInfoWindow = new google.maps.InfoWindow({
+        content: pumpkinString
+      });
+      attachInfoWindow(pumpkinMarker, pumpkinInfoWindow);
+     }
     </script>
   </head>
   <body>
