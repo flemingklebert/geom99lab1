@@ -4,12 +4,9 @@
     <title>Story Map</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
         #map {
           height: 100%;
         }
-        /* Optional: Makes the sample page fill the window. */
         html,
         body {
           height: 100%;
@@ -19,12 +16,10 @@
     </style>
     <script>
       let map;
-
       function initMap() {
         map = new google.maps.Map(document.getElementById("map"), {
-        center: {lat: 41.826, lng: -74.230},
+        center: {lat: 42.826, lng: -74.230},
         zoom: 7,
-      
         styles: [
           { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
           { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },
@@ -106,24 +101,32 @@
            },
          ],
        });
+       const car= "https://flemingklebert.github.io/geom99lab1/story/car.png";
        new google.maps.Marker({
-        position: {lat: 44.357, lng: -78.742},
+        position: {lat: 44.280, lng: -78.742},
         map,
+        icon: car,
         title: "Lindsay, ON",
       });
+       const plane= "https://flemingklebert.github.io/geom99lab1/story/plane.png";
        new google.maps.Marker({
-        position: {lat: 42.385, lng: -83.060},
+        position: {lat: 41.825, lng: -83.560},
         map,
+        icon: plane,
         title: "Detroit, MI",
       });
+       const cruise= "https://flemingklebert.github.io/geom99lab1/story/cruise.png";
        new google.maps.Marker({
-        position: {lat: 40.875, lng: -73.985},
+        position: {lat: 40.111, lng: -73.656},
         map,
+        icon: cruise,
         title: "New York, NY",
       });
+      const pumpkin= "https://flemingklebert.github.io/geom99lab1/story/pumpkin.png"
       new google.maps.Marker({
-        position: {lat: 45.323, lng: -65.932},
+        position: {lat: 45.213, lng: -65.402},
         map,
+        icon: pumpkin,
         title: "Saint John, NB",
       });
       const TripCoordinates = [
@@ -134,9 +137,9 @@
       {lat: 42.274, lng: -82.962},
       {lat: 42.385, lng: -83.060},
       {lat: 42.230, lng: -83.357},
-      {lat: 40.875, lng: -73.985},
+      {lat: 40.675, lng: -74.056},
       {lat: 41.511, lng: -69.677},
-      {lat: 45.323, lng: -65.932},
+      {lat: 45.268, lng: -66.073},
       ];
       const TripPath = new google.maps.Polyline({
         path: TripCoordinates,
@@ -147,7 +150,6 @@
       });
       TripPath.setMap(map);
     }
-
     </script>
   </head>
   <body>
